@@ -7,7 +7,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 });
 
 //     click and top buttons in sections
-$("#click-btn1").click(function() {
+$("#click-btn1").on('click touchstart', function() {
     $([document.documentElement, document.body]).animate({
         scrollTop: $("#projects").offset().top
     }, 1300);
@@ -35,7 +35,7 @@ $(document).ready(function() {
 });
 
 // to show contact info when click on icons
-$(".icons").click(function() {
+$(".icons").on('click touchstart', function() {
     $("#end").slideToggle("slow", function() {
         if ($(this).is(":visible")) {
             $('body').animate({
